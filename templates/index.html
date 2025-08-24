@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Maze Solver Visualizer</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <h1>Maze Solver Visualizer</h1>
+    <div id="controls">
+        <button onclick="selectAlgorithm('bfs')">BFS</button>
+        <button onclick="selectAlgorithm('dfs')">DFS</button>
+        <button onclick="selectAlgorithm('dijkstra')">Dijkstra</button>
+        <button onclick="generateRandomMaze()">Random Maze</button>
+        <button onclick="clearWalls()">Clear Walls</button>
+        <button onclick="clearPath()">Clear Path</button>
+    </div>
+    <div id="maze"></div>
+    <div id="time"></div>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
